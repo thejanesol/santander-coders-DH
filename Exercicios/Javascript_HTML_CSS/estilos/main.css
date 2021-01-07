@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;700&display=swap');
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #EEE0CB;
+}
+
+/* Header */
+.bookshop_header {
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgb(0, 0, 0);
+    color: #EEE0CB;
+}
+
+.bookshop_header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.dh_title {
+    font-family: "Mulish", sans-serif;
+    font-weight: 300;
+}
+/* Botão menu */
+#dh_menu_btn {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+    background-color:rgba(21, 93, 247, 0.7);
+    color: #EEE0CB;
+    font-size: 25px;
+    transition: filter .3s;
+}
+
+#dh_menu_btn:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+/*Customização do menu*/
+#menu {
+    display: none;
+    position: absolute;
+    z-index: 5;
+
+    width: 15vw;
+    right: 0;
+    top: 12vh;
+}
+
+#menu ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    margin: 0;
+    padding-inline-start: 0;
+    
+    list-style: none;
+    border-bottom-left-radius: 0.8em;
+    background-color: rgba(21, 93, 247, 0.7);
+}
+
+#menu a {
+    display: block;
+
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    
+    text-align: center;
+    text-decoration: none;
+    font-family: "Mulish", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+#menu a:hover {
+    border-bottom: 0.1em solid rgb(255, 255, 255);
+    border-bottom-left-radius: 0.8em;
+    background-color: rgb(0, 0, 0);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(21, 93, 247, 0.5), rgb(255, 255, 255));
+}
+
+/* Carousel */
+#dh_carousel {
+    overflow: hidden;
+
+    width: 100%;
+    height: 60vh;
+
+    background-color: #ccc; 
+}
+
+/* Lista das imagens */
+#caroussel {
+    position: relative; 
+
+    list-style: none;
+    margin: 0 auto;
+    padding-inline-start: 0px;
+}
+
+.imagensCaroussel {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    -webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	transition: opacity 1s;
+
+}
+
+.img-caroussel {
+    width: 100%;
+    height: 100vh;
+}
+
+.imagensCaroussel-active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.botoes-carrossel {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+
+    height: 100%;
+}
+
+#btn-anterior, #btn-proximo {
+    border: none;
+    outline: none;
+    font-size: 1.8em;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+}
+
+#btn-anterior:hover, #btn-proximo:hover{
+    background-color: rgba(21, 93, 247, 0.5);
+}
+
+#btn-anterior:active, #btn-proximo:active {
+    transform: translateY(2px);
+}
+
+/* 
+.carrousel_label {
+    font-family: "Mulish", sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    color: #777;
+} */
+
+.filters {
+    width: 100%;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.name_box {
+    display: flex;
+}
+
+#search_bar {
+    width: 50vw;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 25px 0 0 25px;
+    border: 1px solid #888;
+    border-right: none;
+    outline: none;
+
+    font-family: "Mulish", sans-serif;
+    color: #666;
+}
+
+#search_button {
+    font-size: 20px;
+    padding: 11px;
+    border-radius: 0 25px 25px 0;
+    border: 1px solid #888;
+    border-left: none;
+    outline: none;
+
+    color: rgb(21, 93, 247);
+
+    transition: filter .3s;
+}
+
+#search_button:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+.advanced_filters select {
+    width: 25vw;
+    font-size: 20px;
+    font-family: "Mulish", sans-serif;
+
+    padding: 10px;
+
+    outline: none;
+    background-color: rgb(201, 195, 241);
+    color: #666;
+    border: 1px solid rgb(88, 40, 202);
+}
+
+.showcase {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-self: center;
+    margin: 50px 0;
+}
+
+
+.card {
+    font-family: 'Mulish', sans-serif;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card h2 {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 30vh;
+    background-color: rgba(21, 93, 247, 0.7);
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.card p {
+    position: absolute;
+    display: none;
+    padding: 0.6vw;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: justify;
+    font-weight: bold;
+    margin: 0;
+    bottom: 0;
+}
+
+.card span {
+    position: absolute;
+    margin: auto;
+    width: auto;
+    bottom: 4vh;
+    padding: 12px;
+    left: 0;
+    
+    box-shadow: 4px 4px 8px rgb(28, 27, 29);
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(27, 27, 27);
+    font-size: 0.9em;
+}
+
+.tagGenero span {
+    bottom: 35vh;
+    right: 0;
+    padding: 4px;
+    margin: auto;
+    width: auto;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9em;
+    border: none;
+
+}
+
+.overlay {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+
+    background-color: #7777;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* padding: 10px; */
+    box-sizing: border-box;
+}
+
+
+.overlay:hover {
+    background-color: transparent;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEE0CB;
+}
+
+@media(min-width: 1498px) {
+    .showcase {
+        width: 60vw;
+    }
+}

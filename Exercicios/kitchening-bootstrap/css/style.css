@@ -1,0 +1,32 @@
+.custom-principal {
+    height: 60vh;
+    width: 100%;
+}
+
+.custom-quadros {
+    width: 100%;
+}
+
+.custom-imagem {
+    height: 30vh;
+    width: 100%;
+}
+
+.custom-h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+}
+
+.faixa {
+    position: relative;
+    bottom: 18vh;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgba(7, 6, 6, 0.5);
+}
+
+.custom-footer {
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+}
